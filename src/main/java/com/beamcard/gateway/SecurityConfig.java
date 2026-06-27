@@ -24,7 +24,7 @@ public class SecurityConfig {
         "/auth/signup", "/auth/login", "/auth/oauth/google", "/auth/refresh"
     };
     private static final String[] PUBLIC_GET = {
-        "/auth/username/*/available", "/.well-known/jwks.json", "/actuator/**"
+        "/auth/username/*/available", "/.well-known/jwks.json", "/actuator/**", "/profiles/@*"
     };
 
     @Bean
