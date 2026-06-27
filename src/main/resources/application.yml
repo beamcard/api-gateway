@@ -11,6 +11,10 @@ spring:
           uri: lb://user-service
           predicates:
             - Path=/auth/**,/.well-known/jwks.json
+        - id: profile-service
+          uri: lb://profile-service
+          predicates:
+            - Path=/profiles/**,/me/profile/**
   security:
     oauth2:
       resourceserver:
