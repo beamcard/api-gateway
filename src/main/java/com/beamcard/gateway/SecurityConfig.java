@@ -21,7 +21,12 @@ public class SecurityConfig {
     private List<String> allowedOrigins;
 
     private static final String[] PUBLIC_POST = {
-        "/auth/signup", "/auth/login", "/auth/oauth/google", "/auth/refresh"
+        "/auth/signup",
+        "/auth/login",
+        "/auth/oauth/google",
+        "/auth/refresh",
+        "/auth/password/forgot",
+        "/auth/password/reset"
     };
     private static final String[] PUBLIC_GET = {
         "/auth/username/*/available", "/.well-known/jwks.json", "/actuator/**", "/profiles/@*"
