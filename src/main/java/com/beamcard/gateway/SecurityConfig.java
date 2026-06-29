@@ -29,7 +29,7 @@ public class SecurityConfig {
         "/auth/password/reset"
     };
     private static final String[] PUBLIC_GET = {
-        "/auth/username/*/available", "/.well-known/jwks.json", "/actuator/**", "/profiles/@*"
+        "/auth/username/*/available", "/.well-known/jwks.json", "/actuator/**", "/profiles/@*", "/profiles/@*/vcard"
     };
 
     @Bean
