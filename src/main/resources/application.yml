@@ -24,6 +24,18 @@ spring:
 beamcard:
   cors:
     allowed-origins: http://localhost:5173
+  rate-limit:
+    enabled: ${RATE_LIMIT_ENABLED:true}
+    limit: ${RATE_LIMIT_MAX:20} # requests per window per IP
+    window-seconds: ${RATE_LIMIT_WINDOW_SECONDS:60}
+    trusted-hops: ${RATE_LIMIT_TRUSTED_HOPS:1}
+    max-tracked-ips: 10000
+    paths:
+      - /auth/login
+      - /auth/signup
+      - /auth/password/forgot
+      - /auth/oauth/google
+      - /auth/email/verify/resend
 
 eureka:
   client:
