@@ -26,7 +26,9 @@ public class SecurityConfig {
         "/auth/oauth/google",
         "/auth/refresh",
         "/auth/password/forgot",
-        "/auth/password/reset"
+        "/auth/password/reset",
+        "/auth/email/verify/confirm",
+        "/auth/email/verify/resend"
     };
     private static final String[] PUBLIC_GET = {
         "/auth/username/*/available",
